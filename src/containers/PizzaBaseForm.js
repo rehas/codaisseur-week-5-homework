@@ -20,7 +20,7 @@ const styles = theme => ({
 
 class ControlledOpenSelect extends React.Component {
   state = {
-    age: "",
+    base: "",
     open: false
   };
 
@@ -51,14 +51,14 @@ class ControlledOpenSelect extends React.Component {
             open={this.state.open}
             onClose={this.handleClose}
             onOpen={this.handleOpen}
-            value={this.state.age}
+            value={this.state.base}
             onChange={this.handleChange}
             inputProps={{
-              name: "age",
+              name: "base",
               id: "demo-controlled-open-select"
             }}
           >
-            <MenuItem value={null}>
+            <MenuItem value={0}>
               <em>None</em>
             </MenuItem>
             <MenuItem value={25}>25cm NY Style € 8,99</MenuItem>
