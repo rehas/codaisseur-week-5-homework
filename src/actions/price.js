@@ -23,6 +23,8 @@ export const updatePrice = () => (dispatch, getState) =>{
    if(sauceToPrice[pizzaStatus.sauce]){
      price += sauceToPrice[pizzaStatus.sauce]
    }
+   price += (pizzaStatus.top.length * 0.5)
+
 
   return dispatch({
       type : UPDATE_PRICE,

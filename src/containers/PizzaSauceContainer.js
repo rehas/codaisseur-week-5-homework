@@ -6,7 +6,7 @@ import PizzaSauceForm from './PizzaSauceForm'
 
 
 class PizzaSauceContainer extends PureComponent{
-  handleBaseFormChange = (selection)=>{
+  handleSauceFormChange = (selection)=>{
     this.props.chooseSauce(selection)
     this.props.updatePrice()
   }
@@ -14,7 +14,7 @@ class PizzaSauceContainer extends PureComponent{
     return (
       <div>
         PizzaSauceContainer
-        <PizzaSauceForm handleChange = {this.handleBaseFormChange}/>
+        <PizzaSauceForm handleChange = {this.handleSauceFormChange}/>
       </div>
     )
   }
