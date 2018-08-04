@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {resetProcess} from '../actions/price'
-import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 class PizzaPriceContainer extends PureComponent{
@@ -12,9 +11,9 @@ class PizzaPriceContainer extends PureComponent{
   render(){
     return (
       <div>
-        <h2> Total Price </h2>
+        <h2 className="selection-header"> Total Price </h2>
         <h2>
-        {(this.props.status.base !==null && this.props.status.base !== 0) &&  this.props.price + ' €'}
+          {(this.props.status.base !==null && this.props.status.base !== 0) &&  this.props.price + ' €'}
         </h2>
         <Button color="secondary" onClick={this.handleClick}>RESET</Button>
       </div>

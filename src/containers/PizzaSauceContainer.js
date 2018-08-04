@@ -12,7 +12,7 @@ class PizzaSauceContainer extends PureComponent{
   render(){
     return (
       <div>
-        <h4> Select Pizza Sauce  </h4>
+        <h4 className="selection-header"> Select Pizza Sauce  </h4>
         <PizzaSauceForm handleChange = {this.handleSauceFormChange}/>
       </div>
     )
