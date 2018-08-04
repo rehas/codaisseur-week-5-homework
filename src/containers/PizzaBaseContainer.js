@@ -21,7 +21,7 @@ class PizzaBaseContainer extends PureComponent{
 
 const mapStateToProps = (state) =>{
   return {
-    sauce: state.pizzasauce
+    base: state.pizzabase
   }
 }
 
