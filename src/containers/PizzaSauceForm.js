@@ -46,7 +46,7 @@ class ControlledOpenSelect extends React.Component {
           Open the select
         </Button>
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="demo-controlled-open-select">Size</InputLabel>
+          <InputLabel htmlFor="pizza-sauce-form">Size</InputLabel>
           <Select
             open={this.state.open}
             onClose={this.handleClose}
@@ -55,7 +55,7 @@ class ControlledOpenSelect extends React.Component {
             onChange={this.handleChange}
             inputProps={{
               name: "sauce",
-              id: "demo-controlled-open-select"
+              id: "pizza-sauce-form"
             }}
           >
             <MenuItem value={'no'}>
@@ -74,7 +74,5 @@ class ControlledOpenSelect extends React.Component {
 ControlledOpenSelect.propTypes = {
   classes: PropTypes.object.isRequired
 };
-
-
 
 export default withStyles(styles)(ControlledOpenSelect);

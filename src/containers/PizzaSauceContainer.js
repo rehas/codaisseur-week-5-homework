@@ -4,7 +4,6 @@ import {updatePrice} from '../actions/price'
 import {connect} from 'react-redux'
 import PizzaSauceForm from './PizzaSauceForm'
 
-
 class PizzaSauceContainer extends PureComponent{
   handleSauceFormChange = (selection)=>{
     this.props.chooseSauce(selection)
@@ -25,6 +24,5 @@ const mapStateToProps = (state) =>{
     sauce: state.pizzasauce
   }
 }
-
 
 export default connect(mapStateToProps, {chooseSauce, updatePrice})(PizzaSauceContainer)

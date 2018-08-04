@@ -1,5 +1,4 @@
 export const UPDATE_PRICE = 'UPDATE_PRICE'
-export const CANCEL_BASE = 'CANCEL_BASE'
 
 const baseToPrice = {
   0 : 0.00,
@@ -17,20 +16,18 @@ const sauceToPrice = {
 
 export const updatePrice = () => (dispatch, getState) =>{
   const pizzaStatus = getState().status
-  // console.log(state)
-
   let price  = baseToPrice[pizzaStatus.base]
+
   if(sauceToPrice[pizzaStatus.sauce]){
     price += sauceToPrice[pizzaStatus.sauce]
   }
   price += (pizzaStatus.top.length * 0.5)
   price *= (pizzaStatus.fast) ? 1.10 : 1
   price = price.toFixed(2)
-  
 
   return dispatch({
       type : UPDATE_PRICE,
       payload : price
     })
-  }
+}
 

@@ -6,11 +6,8 @@ import {connect} from 'react-redux'
 import {expressDelivery} from '../actions/expressdelivery'
 import {updatePrice} from '../actions/price'
 
-
-
 class ExpressDeliveryContainer extends PureComponent{
   handleExpressFormChange = (selection)=>{
-    console.log(selection)
     this.props.expressDelivery(selection)
     this.props.updatePrice()
   }
@@ -32,8 +29,6 @@ class ExpressDeliverySwitch extends React.Component {
   };
 
   handleChange = name => event => {
-    console.log(name)
-    console.log(event.target.checked)
     this.setState({ [name]: event.target.checked });
     this.props.handleExpress({[name]: event.target.checked})
   };

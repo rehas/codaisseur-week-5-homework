@@ -30,9 +30,7 @@ class CheckboxesGroup extends React.Component {
 
   handleChange = name => event => {
     this.props.handleSelection({[name] : event.target.checked})
-    // if(Object.values(this.state).filter(x =>x).length <3 || event.target.checked){
-      this.setState({ [name]: event.target.checked });
-    // }
+    this.setState({ [name]: event.target.checked });
   };
 
   render() {
@@ -42,7 +40,6 @@ class CheckboxesGroup extends React.Component {
 
     return (
       <div className={classes.root}>
-        
         <FormControl required error={error} component="fieldset" className={classes.formControl}>
           <FormLabel component="legend">Please pick upto 3 toppings for your pizza</FormLabel>
           <FormGroup>

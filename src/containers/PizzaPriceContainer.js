@@ -1,10 +1,7 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 
-
 class PizzaPriceContainer extends PureComponent{
-  
-
   render(){
     return (
       <div>
@@ -13,7 +10,6 @@ class PizzaPriceContainer extends PureComponent{
     )
   }
 }
-
 
 const mapStateToProps = (state) =>{
   return {
