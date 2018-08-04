@@ -19,12 +19,14 @@ export const updatePrice = () => (dispatch, getState) =>{
   const pizzaStatus = getState().status
   // console.log(state)
 
-   let price  = baseToPrice[pizzaStatus.base]
-   if(sauceToPrice[pizzaStatus.sauce]){
-     price += sauceToPrice[pizzaStatus.sauce]
-   }
-   price += (pizzaStatus.top.length * 0.5)
-
+  let price  = baseToPrice[pizzaStatus.base]
+  if(sauceToPrice[pizzaStatus.sauce]){
+    price += sauceToPrice[pizzaStatus.sauce]
+  }
+  price += (pizzaStatus.top.length * 0.5)
+  price *= (pizzaStatus.fast) ? 1.10 : 1
+  price = price.toFixed(2)
+  
 
   return dispatch({
       type : UPDATE_PRICE,
