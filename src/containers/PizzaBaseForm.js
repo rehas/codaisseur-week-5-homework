@@ -5,7 +5,6 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   button: {
@@ -42,9 +41,7 @@ class ControlledOpenSelect extends React.Component {
 
     return (
       <form autoComplete="off">
-        <Button className={classes.button} onClick={this.handleOpen}>
-          Open the select
-        </Button>
+        
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="demo-controlled-open-select">Size</InputLabel>
           <Select

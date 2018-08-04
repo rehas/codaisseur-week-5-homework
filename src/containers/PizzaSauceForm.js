@@ -42,9 +42,7 @@ class ControlledOpenSelect extends React.Component {
 
     return (
       <form autoComplete="off">
-        <Button className={classes.button} onClick={this.handleOpen}>
-          Open the select
-        </Button>
+        
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="pizza-sauce-form">Size</InputLabel>
           <Select

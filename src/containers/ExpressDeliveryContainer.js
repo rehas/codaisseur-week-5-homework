@@ -14,7 +14,8 @@ class ExpressDeliveryContainer extends PureComponent{
   render(){
     return (
       <div>
-        Express Delivery
+         <h4> Express Delivery</h4>
+         <h6> Super Fast Drone Delivery for extra %10 </h6>
         <ExpressDeliverySwitch handleExpress={this.handleExpressFormChange}/>
       </div>
     )
@@ -35,7 +36,8 @@ class ExpressDeliverySwitch extends React.Component {
 
   render() {
     return (
-      <FormGroup row>
+      <div>
+      <FormGroup style={{display: 'block'}}>
         <FormControlLabel
           control={
             <Switch
@@ -44,9 +46,10 @@ class ExpressDeliverySwitch extends React.Component {
               value="fast"
             />
           }
-          label="Express Delivery With Drone Adds %10 to the price"
+          label="Express"
         />
       </FormGroup>
+      </div>
     );
   }
 }
