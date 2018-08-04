@@ -61,9 +61,9 @@ class ControlledOpenSelect extends React.Component {
             <MenuItem value={null}>
               <em>None</em>
             </MenuItem>
-            <MenuItem value={"White"}>White sauce € 0,00  </MenuItem>
-            <MenuItem value={"Red"}>  Red sauce € 1,00 </MenuItem>
-            <MenuItem value={"Mix"}>  Mix it up € 1,50 </MenuItem>
+            <MenuItem value={"white"}>White sauce € 0,00  </MenuItem>
+            <MenuItem value={"red"}>  Red sauce € 1,00 </MenuItem>
+            <MenuItem value={"mix"}>  Mix it up € 1,50 </MenuItem>
           </Select>
         </FormControl>
       </form>
