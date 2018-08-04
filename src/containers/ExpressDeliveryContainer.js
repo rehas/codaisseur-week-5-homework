@@ -8,7 +8,6 @@ import {updatePrice} from '../actions/price'
 
 class ExpressDeliveryContainer extends PureComponent{
   handleExpressFormChange = (selection)=>{
-    console.log(selection)
     this.props.expressDelivery(selection)
     this.props.updatePrice()
   }
