@@ -5,6 +5,7 @@ import PizzaBaseContainer from './containers/PizzaBaseContainer'
 import PizzaSauceContainer from './containers/PizzaSauceContainer'
 import PizzaPriceContainer from './containers/PizzaPriceContainer';
 import PizzaToppingsContainer from './containers/PizzaToppingsContainer';
+import ExpressDeliveryContainer from './containers/ExpressDeliveryContainer';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         <PizzaBaseContainer/>
         <PizzaSauceContainer/>
         <PizzaToppingsContainer/>
+        <ExpressDeliveryContainer/>
       </div>
     );
   }

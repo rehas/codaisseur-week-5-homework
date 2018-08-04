@@ -1,6 +1,7 @@
 import { CHOOSE_BASE, CANCEL_BASE } from '../actions/pizzabase'
 import { CHOOSE_SAUCE, CANCEL_SAUCE } from '../actions/pizzasauce'
 import { CHOOSE_TOPPINGS } from '../actions/pizzatoppings'
+import { EXPRESS_DELIVERY } from '../actions/expressdelivery'
 
 const initialState = {
   base : null,
@@ -34,6 +35,13 @@ export default function(state = initialState, action){
           ...state,
           top: newToppings
         }
+      }
+    case EXPRESS_DELIVERY:
+      // console.log("express aciton")
+      // console.log(action)
+      return {
+        ...state,
+        fast: action.payload.fast
       }
   
     default:
