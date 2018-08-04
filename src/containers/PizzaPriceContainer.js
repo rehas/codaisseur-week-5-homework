@@ -8,11 +8,13 @@ class PizzaPriceContainer extends PureComponent{
   handleClick = () =>{
     this.props.resetProcess()
   }
+  
   render(){
     return (
       <div>
+        <h2> Total Price </h2>
         <h2>
-        {(this.props.status.base !==null && this.props.status.base !== 0) &&  this.props.price}
+        {(this.props.status.base !==null && this.props.status.base !== 0) &&  this.props.price + ' €'}
         </h2>
         <Button color="secondary" onClick={this.handleClick}>RESET</Button>
       </div>
