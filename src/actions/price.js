@@ -1,4 +1,5 @@
 export const UPDATE_PRICE = 'UPDATE_PRICE'
+export const RESET_PROCESS = 'RESET_PROCESS'
 
 const baseToPrice = {
   0 : 0.00,
@@ -29,5 +30,11 @@ export const updatePrice = () => (dispatch, getState) =>{
       type : UPDATE_PRICE,
       payload : price
     })
+}
+
+export const resetProcess = () => (dispatch) =>{
+  return dispatch({
+    type: RESET_PROCESS,
+  })
 }
 

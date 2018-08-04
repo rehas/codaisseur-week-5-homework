@@ -2,6 +2,7 @@ import { CHOOSE_BASE } from '../actions/pizzabase'
 import { CHOOSE_SAUCE } from '../actions/pizzasauce'
 import { CHOOSE_TOPPINGS } from '../actions/pizzatoppings'
 import { EXPRESS_DELIVERY } from '../actions/expressdelivery'
+import { RESET_PROCESS } from '../actions/price'
 
 const initialState = {
   base : null,
@@ -41,7 +42,8 @@ export default function(state = initialState, action){
         ...state,
         fast: action.payload.fast
       }
-  
+      case RESET_PROCESS:
+        return initialState
     default:
       return state
   }
