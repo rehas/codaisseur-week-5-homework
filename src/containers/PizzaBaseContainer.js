@@ -4,7 +4,6 @@ import {updatePrice} from '../actions/price'
 import {connect} from 'react-redux'
 import PizzaBaseForm from './PizzaBaseForm'
 
-
 class PizzaBaseContainer extends PureComponent{
   handleBaseFormChange = (selection)=>{
     this.props.chooseBase(selection)
@@ -19,7 +18,6 @@ class PizzaBaseContainer extends PureComponent{
     )
   }
 }
-
 
 const mapStateToProps = (state) =>{
   return {

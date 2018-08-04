@@ -1,5 +1,4 @@
 export const UPDATE_PRICE = 'UPDATE_PRICE'
-export const CANCEL_BASE = 'CANCEL_BASE'
 
 const baseToPrice = {
   0 : 0.00,
@@ -17,7 +16,6 @@ const sauceToPrice = {
 
 export const updatePrice = () => (dispatch, getState) =>{
   const pizzaStatus = getState().status
-  // console.log(state)
 
   let price  = baseToPrice[pizzaStatus.base]
   if(sauceToPrice[pizzaStatus.sauce]){

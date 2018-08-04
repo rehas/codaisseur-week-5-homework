@@ -1,5 +1,5 @@
-import { CHOOSE_BASE, CANCEL_BASE } from '../actions/pizzabase'
-import { CHOOSE_SAUCE, CANCEL_SAUCE } from '../actions/pizzasauce'
+import { CHOOSE_BASE } from '../actions/pizzabase'
+import { CHOOSE_SAUCE } from '../actions/pizzasauce'
 import { CHOOSE_TOPPINGS } from '../actions/pizzatoppings'
 import { EXPRESS_DELIVERY } from '../actions/expressdelivery'
 
@@ -37,8 +37,6 @@ export default function(state = initialState, action){
         }
       }
     case EXPRESS_DELIVERY:
-      // console.log("express aciton")
-      // console.log(action)
       return {
         ...state,
         fast: action.payload.fast
